@@ -1,7 +1,7 @@
 <?php
 namespace SimpleForm;
 
-require __DIR__.'/FormElement.php';
+require_once __DIR__.'/FormElement.php';
 
 /**
  * Class Input
