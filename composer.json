@@ -1,0 +1,19 @@
+{
+    "name": "dimensi0n/simple-form",
+    "description": "Simple Form generator",
+    "type": "library",
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "^2.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erwan ROUSSEL",
+            "email": "erwan.roussel51@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"SimpleForm\\": "src/"}
+    }
+}
