@@ -1,8 +1,8 @@
 <?php
 namespace SimpleForm;
 
-require './Input.php';
-require './SubmitButton.php';
+require __DIR__.'/Input.php';
+require __DIR__.'/SubmitButton.php';
 
 /**
  * Provides a form generator and a data validator

@@ -1,7 +1,7 @@
 <?php
 namespace SimpleForm;
 
-require './FormElement.php';
+require __DIR__.'/FormElement.php';
 
 /**
  * Class SubmitButton
