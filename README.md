@@ -36,4 +36,27 @@ echo 'Email : '.$values['email'];
 echo 'Password : '.$values['password'];
 ```
 
+## Custom Renderingvendor/vendor/phpdocumentor/phpdocumentor/bin/phpdoc/phpdocumentor/phpdocumentor/bin/phpdocdocumentor/phpdocumentor/bin/phpdoc
+
+Example with bootstrap :
+
+```php
+$form = new Form('Login');
+        $form->addInput('email', 'email', 'Email address') // name, type, label
+		   ->addInput('password', 'password', 'Mot de passe') // name, type, label
+           ->addSubmit('Submit'); // content
+
+<div class="container">
+    <?= $form.formStart() ?>
+    <div class="form-group">
+        <?= $form.formInput('email') ?> // Will render label and input
+    </div>
+    <div class="form-group">
+        <?= $form.formInput('password') ?> // Will render label and input
+    </div>
+    <?= $form.formEnd() ?>
+</div>
+```
+
+
 For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
