@@ -13,6 +13,9 @@
             "email": "erwan.roussel51@gmail.com"
         }
     ],
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "require": {},
     "autoload": {
         "psr-4": {"SimpleForm\\": "src/"}
