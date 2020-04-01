@@ -1,4 +1,7 @@
 # simple-form
+
+![PHP Composer](https://github.com/dimensi0n/simple-form/workflows/PHP%20Composer/badge.svg)
+
 Provides a simple form generator and a data validator
 
 ## How to use it ?
@@ -32,3 +35,5 @@ $values = $form->getValues($_POST);
 echo 'Email : '.$values['email'];
 echo 'Password : '.$values['password'];
 ```
+
+For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
