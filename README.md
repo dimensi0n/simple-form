@@ -6,6 +6,14 @@ Provides a simple form generator and a data validator
 
 ## How to use it ?
 
+Install it :
+
+```
+composer require dimensi0n/simple-form
+```
+
+This :
+
 ```php
 $form = new Form('Login');
         $form->addInput('email', 'email', 'Email address') // name, type, label
@@ -15,7 +23,7 @@ $form = new Form('Login');
 echo $form->renderHTML;
 ```
 
-It will render this :
+Will render this :
 
 ```html
 <form action="" method="POST">
@@ -36,6 +44,7 @@ echo 'Email : '.$values['email'];
 echo 'Password : '.$values['password'];
 ```
 
+<<<<<<< HEAD
 ## Custom Renderingvendor/vendor/phpdocumentor/phpdocumentor/bin/phpdoc/phpdocumentor/phpdocumentor/bin/phpdocdocumentor/phpdocumentor/bin/phpdoc
 
 Example with bootstrap :
@@ -60,3 +69,6 @@ $form = new Form('Login');
 
 
 For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
+=======
+For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
+>>>>>>> d2f77c257e64cc46cddc3b7668c54677c110e263
