@@ -6,7 +6,7 @@ class SubmitButtonTest extends TestCase
 {
     public function testRenderHTML()
     {
-        $button = new SubmitButton('Send', 'submit', '', ['btn', 'btn-primary'], 'send');
-        $this->assertEquals('<button type="submit" class="btn btn-primary" id="send">Send</button>', $button->renderHTML());
+        $button = new SubmitButton('Submit', 'submit', '', ['btn', 'btn-primary'], 'submit');
+        $this->assertEquals('<button type="submit" class="btn btn-primary" id="submit">Submit</button>', $button->renderHTML());
     }
 }

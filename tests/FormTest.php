@@ -7,18 +7,18 @@ class FormTest extends TestCase
     public function testRenderHTML()
     {
         $form = new Form('Login');
-        $form->addInput('email', 'email', 'Addresse Mail')
-		   ->addInput('password', 'password', 'Mot de passe')
-           ->addSubmit('Envoyer');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
            
-        $this->assertEquals('<form action="" method="POST"><label for="email">Addresse Mail</label><input type="email" name="email" class="form-control" id="email"/><label for="password">Mot de passe</label><input type="password" name="password" class="form-control" id="password"/><button type="submit" class="btn btn-primary" id="Envoyer">Envoyer</button></form>', $form->renderHTML());
+        $this->assertEquals('<form action="" method="POST"><label for="email">Email Address</label><input type="email" name="email" class="form-control" id="email"/><label for="password">Password</label><input type="password" name="password" class="form-control" id="password"/><button type="submit" class="btn btn-primary" id="Submit">Submit</button></form>', $form->renderHTML());
     }
     public function testGetValue()
     {
         $form = new Form('Login');
-        $form->addInput('email', 'email', 'Addresse Mail')
-		   ->addInput('password', 'password', 'Mot de passe')
-           ->addSubmit('Envoyer');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
 
         $POST = array();
         $POST['email'] = '  erwan.roussel@openincubator.tech ';
