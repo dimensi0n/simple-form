@@ -44,8 +44,7 @@ echo 'Email : '.$values['email'];
 echo 'Password : '.$values['password'];
 ```
 
-<<<<<<< HEAD
-## Custom Renderingvendor/vendor/phpdocumentor/phpdocumentor/bin/phpdoc/phpdocumentor/phpdocumentor/bin/phpdocdocumentor/phpdocumentor/bin/phpdoc
+## Custom Rendering
 
 Example with bootstrap :
 
@@ -69,6 +68,3 @@ $form = new Form('Login');
 
 
 For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
-=======
-For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
->>>>>>> d2f77c257e64cc46cddc3b7668c54677c110e263
