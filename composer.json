@@ -14,7 +14,8 @@
         }
     ],
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/phpunit",
+        "docs": "vendor/phpdocumentor/phpdocumentor/bin/phpdoc"
     },
     "require": {},
     "autoload": {

@@ -111,6 +111,43 @@ class Form
     }
 
     /**
+     * Render the beginning of the form
+     * 
+     * @return void
+     */
+    public function formStart() : string
+    {
+        return '<form action="'.$this->action.'" method="'.$this->method.'">';
+    }
+
+    /**
+     * Render the end of the form
+     * 
+     * @return void
+     */
+    public function formEnd() : string
+    {
+        return '</form>';
+    }
+
+    /**
+     * Render the specified input
+     * 
+     * @param string $name
+     * 
+     * @return void
+     */
+    public function formInput(string $name) : string
+    {
+        foreach ($this->inputs as $input) {
+            if ($input->getName() === $name) {
+                return $input->renderHTML();
+            }
+        }
+        return 'Input does not exist';
+    }
+
+    /**
      * Get values of the form
      * 
      * @param array $post

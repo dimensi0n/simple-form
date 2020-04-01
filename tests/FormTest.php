@@ -13,6 +13,37 @@ class FormTest extends TestCase
            
         $this->assertEquals('<form action="" method="POST"><label for="email">Email Address</label><input type="email" name="email" class="form-control" id="email"/><label for="password">Password</label><input type="password" name="password" class="form-control" id="password"/><button type="submit" class="btn btn-primary" id="Submit">Submit</button></form>', $form->renderHTML());
     }
+
+    public function testFormStart()
+    {
+        $form = new Form('Login');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
+
+        $this->assertEquals('<form action="" method="POST">', $form->formStart());
+    }
+
+    public function testFormEnd()
+    {
+        $form = new Form('Login');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
+
+        $this->assertEquals('</form>', $form->formEnd());
+    }
+
+    public function testFormInput()
+    {
+        $form = new Form('Login');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
+
+        $this->assertEquals('<label for="password">Password</label><input type="password" name="password" class="form-control" id="password"/>', $form->formInput('password'));
+    }
+
     public function testGetValue()
     {
         $form = new Form('Login');
