@@ -160,6 +160,9 @@ class Form
         foreach ($this->inputs as $input) {
             $name = $input->getName();
             $values[$name] = stripslashes(trim(htmlspecialchars($post[$name])));
+            if ($values[$name] === '') {
+                $values['empty'][] = $name;
+            }
         }
 
         return $values;

@@ -59,4 +59,35 @@ class FormTest extends TestCase
         $this->assertEquals('erwan.roussel@openincubator.tech', $values['email']);
         $this->assertEquals('mysuperpassword', $values['password']);
     }
+
+    public function testEmptyValue()
+    {
+        $form = new Form('Login');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
+
+        $POST = array();
+        $POST['email'] = '';
+        $POST['password'] = ' mysuperpas\swor\d ';
+        
+        $values = $form->getValues($POST);
+        $this->assertEquals(['email'], $values['empty']);
+        $this->assertEquals('mysuperpassword', $values['password']);
+    }
+
+    public function testEmptyValues()
+    {
+        $form = new Form('Login');
+        $form->addInput('email', 'email', 'Email Address')
+		   ->addInput('password', 'password', 'Password')
+           ->addSubmit('Submit');
+
+        $POST = array();
+        $POST['email'] = '';
+        $POST['password'] = '';
+        
+        $values = $form->getValues($POST);
+        $this->assertEquals(['email', 'password'], $values['empty']);
+    }
 }

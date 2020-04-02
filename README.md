@@ -15,7 +15,7 @@ composer require dimensi0n/simple-form
 This :
 
 ```php
-$form = new Form('Login');
+$form = new \SimpleForm\Form('Login');
         $form->addInput('email', 'email', 'Email address') // name, type, label
 		   ->addInput('password', 'password', 'Mot de passe') // name, type, label
            ->addSubmit('Submit'); // content
@@ -38,10 +38,16 @@ Will render this :
 In order to validate the form and get its value you just have to write this :
 
 ```php
-$values = $form->getValues($_POST);
+$values = $form->getValues($_POST); // check if all fields are filled, also applies trim(), stripslashes() and htmlspecialchars()
 
-echo 'Email : '.$values['email'];
-echo 'Password : '.$values['password'];
+if (isset($values['empty'])) {
+    foreach($values['empty'] as $empty_value) {
+        echo $empty_value.' is empty'; // 'Name of the empty field' is empty
+    }
+} else {
+    echo 'Email : '.$values['email'];
+    echo 'Password : '.$values['password'];
+}
 ```
 
 ## Custom Rendering
@@ -49,7 +55,7 @@ echo 'Password : '.$values['password'];
 Example with bootstrap :
 
 ```php
-$form = new Form('Login');
+$form = new \SimpleForm\Form('Login');
         $form->addInput('email', 'email', 'Email address') // name, type, label
 		   ->addInput('password', 'password', 'Mot de passe') // name, type, label
            ->addSubmit('Submit'); // content
