@@ -73,4 +73,4 @@ $form = new \SimpleForm\Form('Login');
 ```
 
 
-For further information check the API docs : [https://dimensi0n.github.com/simple-form/api](https://dimensi0n.github.com/simple-form/api)
+For further information check the API docs : [https://dimensi0n.github.io/simple-form/api](https://dimensi0n.github.io/simple-form/api)
