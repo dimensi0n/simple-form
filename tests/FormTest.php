@@ -31,7 +31,7 @@ class FormTest extends TestCase
 		   ->addInput('password', 'password', 'Password')
            ->addSubmit('Submit');
 
-        $this->assertEquals('</form>', $form->formEnd());
+        $this->assertEquals('<button type="submit" class="btn btn-primary" id="submit">Submit</button></form>', $form->formEnd());
     }
 
     public function testFormInput()
