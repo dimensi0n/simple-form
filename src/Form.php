@@ -127,7 +127,7 @@ class Form
      */
     public function formEnd() : string
     {
-        return '</form>';
+        return <button type="submit" class="btn btn-primary" id="submit">Submit</button>.'</form>';
     }
 
     /**
