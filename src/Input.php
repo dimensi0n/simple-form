@@ -12,9 +12,9 @@ class Input extends FormElement implements FormElementInterface
     /**
      * @return void
      */
-    public function renderHTML() : string 
+    public function renderHTML(string $value = null) : string 
     {
-        return '<label for="'.$this->id.'">'.$this->label.'</label><input type="'.$this->type.'" name="'.$this->name.'" class="'.join(' ',$this->class).'" id="'.$this->id.'"/>';
+        return '<label for="'.$this->id.'">'.$this->label.'</label><input type="'.$this->type.'" name="'.$this->name.'" class="'.join(' ',$this->class).'" id="'.$this->id.'"'.($value ? 'value="'.$value.'"' : '').'/>';
     }
 
     /**

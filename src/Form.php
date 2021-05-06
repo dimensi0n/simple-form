@@ -127,7 +127,7 @@ class Form
      */
     public function formEnd() : string
     {
-        return <button type="submit" class="btn btn-primary" id="submit">Submit</button>.'</form>';
+        return $this->submit->renderHTML().'</form>';
     }
 
     /**
@@ -137,11 +137,11 @@ class Form
      * 
      * @return void
      */
-    public function formInput(string $name) : string
+    public function formInput(string $name, string $value = null) : string
     {
         foreach ($this->inputs as $input) {
             if ($input->getName() === $name) {
-                return $input->renderHTML();
+                return $input->renderHTML($value);
             }
         }
         return 'Input does not exist';
